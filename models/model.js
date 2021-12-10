@@ -11,11 +11,15 @@ const personSchema = new Schema(
       type: String,
       required: true,
     },
-    age: {
-      type: Number,
+    title: {
+      type: String,
       required: true,
     },
     description: {
+      type: String,
+      required: true,
+    },
+    selectedFile: {
       type: String,
       required: true,
     },

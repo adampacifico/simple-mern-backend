@@ -3,10 +3,14 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import personRoutes from './routes/routes.js'
+import bodyParser from 'body-parser';
+
 const app = express()
 
 app.use(cors())
-app.use(express.json())
+// app.use(express.json())
+app.use(bodyParser.json({limit: '50mb'}));
+// app.use(express.limit(100000000));
 // app.listen(3001, () => {
 //     console.log('HEYYYYYYYYYYYY')
 // })
