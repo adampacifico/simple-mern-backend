@@ -4,7 +4,7 @@ import Person from "../models/model.js";
 // read persons
 export const readPersons = async (req, res) => {
   try {
-    const persons = await Person.find().sort({ datecreated: -1 });
+    const persons = await Person.find().sort({ createdAt: -1 });
     res.status(200).json(persons);
   } catch (error) {
     res.status(404).json({ error: error.message });
